@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Inscription, Category
 
 def index(request):
-    return HttpResponse("Labas, pasauli!")
+    return render(request, 'note/index.html')

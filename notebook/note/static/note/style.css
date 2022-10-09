@@ -1,0 +1,46 @@
+body {
+    margin: 1rem;
+    font-family: 'Ubuntu', sans-serif; /*pasirinktas sriftas*/
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    padding: 2rem 2rem 2rem 75rem;
+    border-radius: 1rem;
+}
+
+.header nav a{
+    text-decoration: none;
+    margin-left: 2rem;
+    padding: 0;
+}
+
+.header nav a:last-child{
+    color: #FF3998;
+}
+
+.index {
+    padding: 4rem 10rem;
+}
+
+.index h1 {
+    font-size: 4.5rem;
+    font-style: bold;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.button {
+    border-radius: 100rem;
+    /* font-family: 'Avenir Next'; */
+    font-size: 1rem;
+    padding:1rem 2rem;
+    color: black;
+    border: solid 4px transparent;
+    background-image: linear-gradient(rgba(255,57,57, 0), rgba(255,129,57, 0), rgb(57,255,160, 0)), linear-gradient(101deg, #FF3939, #FF8139, #39FFA0);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+} 
