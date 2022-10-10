@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: beige;
-    padding: 2rem 2rem 2rem 75rem;
+    padding: 2rem 2rem 2rem 65rem;
     border-radius: 1rem;
 }
 
@@ -36,7 +36,7 @@ body {
     border-radius: 100rem;
     /* font-family: 'Avenir Next'; */
     font-size: 1rem;
-    padding:1rem 2rem;
+    padding:0.5rem 2rem;
     color: black;
     border: solid 4px transparent;
     background-image: linear-gradient(rgba(255,57,57, 0), rgba(255,129,57, 0), rgb(57,255,160, 0)), linear-gradient(101deg, #FF3939, #FF8139, #39FFA0);
@@ -44,3 +44,29 @@ body {
     background-clip: content-box, border-box;
     box-shadow: 2px 1000px 1px #fff inset;
 } 
+
+form {
+    border: 1rem solid #f1f1f1;
+    padding: 2rem 12rem;
+    border-radius: 2rem;
+  }
+
+  .form {
+    border: 1rem solid #f1f1f1;
+    padding: 2rem 12rem;
+    border-radius: 2rem;
+  }
+  
+  .line {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .space {
+    padding: 0.5rem;
+  }
+  

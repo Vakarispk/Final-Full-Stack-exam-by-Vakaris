@@ -20,7 +20,8 @@ from django.conf.urls.static import static
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('note/', include('note.urls')),
+    path('note/', include(('note.urls', 'note' ), namespace='note')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', RedirectView.as_view(url='note/', permanent=False)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -10,21 +10,22 @@
 </head>
 <body>
     {% block sidebar %}
-        <header>
             <div class="header">
+            {% if user.is_authenticated %}
+                <h>Labas - {{ user.get_username }}</h>
             <nav>
-                <a href="{% url 'index' %}">Sveiki</a>
-                <a href="#">Prisijungti</a>
-                <a href="#">Registruotis</a>
+                <a href="#">Mano užrašai</a>
+                <a href="#">Mano Kategorijos</a>
+                <a href="{% url 'logout' %}">Atsijungti</a>
             </nav>
+            {% else %}
+            <nav>
+                <a href="{% url 'note:index' %}">Sveiki</a>
+                <a href="{% url 'login'%}?next={% url 'note:index' %}">Prisijungti</a>
+                <a href="{% url 'note:register' %}">Registruotis</a>
+            </nav>
+            {% endif %}
             </div>
-        </header>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
     {% endblock %}
     <div>{% block content %}{% endblock %}</div>
 </body>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <div role="alert">
+                    {{ message }}
+                </div>
+            {% else %}
+                <div role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <div>
+        <h3>Registracija</h3><br/>
+        <form method="post">
+            {% csrf_token %}
+            <div class="space">
+                <label for="username">Vartotojo vardas</label>
+                <input name="username" type="text" class="line" id="username" aria-describedby="usernameHelp">
+                <small id="usernameHelp">Iki 150 simbolių.</small>
+            </div>
+            <div class="space">
+                <label for="exampleInputEmail1">El. paštas</label>
+                <input name="email" type="email" class="line" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp">Nesidalinsime su niekuo, nesiųsime jokio spamo.
+                    Reikalingas naujam slaptažodžiui išsiųsti. </small>
+            </div>
+            <div class="space">
+                <label for="password">Slaptažodis</label>
+                <input name="password" type="password" class="line" id="password" aria-describedby="pwdHelp">
+                <small id="pwdHelp">Ne mažiau, kaip 8 simboliai. Negali būti vien tik
+                    skaičiai</small>
+            </div>
+            <div class="space">
+                <label for="password2">Pakartoti slaptažodį</label>
+                <input name="password2" type="password" class="line" id="password2" aria-describedby="pwd2Help">
+            </div>
+            <button type="submit" class="button">Registruotis</button>
+        </form>
+        <p>Jeigu užsiregistravote anksčiau, <a href="{% url 'login' %}"><strong>prisijunkite.</strong></a></p>
+    </div>
+
+{% endblock %}
