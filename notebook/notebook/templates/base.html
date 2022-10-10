@@ -15,8 +15,11 @@
                 <h>Labas - {{ user.get_username }}</h>
             <nav>
                 <a href="{% url 'note:mynotes' %}">Mano užrašai</a>
-                <a href="#">Mano Kategorijos</a>
+                <a href="{% url 'note:mycategorys' %}">Mano Kategorijos</a>
                 <a href="{% url 'logout' %}">Atsijungti</a>
+                <form action="{% url 'note:search' %}" method="get" class="form-inline my-2 my-md-0">
+                    <input name="query" class="form-control" type="text" placeholder="Paieška">
+                </form>
             </nav>
             {% else %}
             <nav>

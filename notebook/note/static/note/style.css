@@ -51,6 +51,18 @@ form {
     border-radius: 2rem;
 }
 
+form[action='/note/search/'] {
+    border: 0rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.form-control {
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
 .form {
     border: 1rem solid #f1f1f1;
     padding: 2rem 12rem;

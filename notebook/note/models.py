@@ -7,6 +7,7 @@ class Inscription(models.Model):
     text = models.TextField('Aprašymas', max_length=1000, help_text='Užrašo aprašymas')
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     reader = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    image = models.ImageField('Nuotrauka', upload_to='covers', null=True)
     def __str__(self):
         return self.title
 

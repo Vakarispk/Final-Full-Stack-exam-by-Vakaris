@@ -1,3 +1,9 @@
 django==4.1.1
 
-pillow
+django_crispy_forms==1.14.0
+
+pillow==9.2.0
+
+login to the admin page
+Username: admin
+Password: Notebook185

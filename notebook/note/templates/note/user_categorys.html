@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form">
+  <h1>Mano sukurtos kategorijos</h1>
+
+  {% if category_list %}
+  <ul>
+
+    {% for notes in category_list %} 
+    <li class="nft">
+      <a class="space">{{notes.name}}</a>
+      {% if notes.reader == user %}
+      <div class="space">
+          <a lass="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'note:my-category-update' notes.id %}">Redaguoti</a>
+          <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'note:my-category-delete' notes.id %}">Ištrinti</a>
+      </div>
+      {% endif %}
+      <a class="button" href="{% url 'note:mycategory' notes.pk %}" role="button">Peržiūrėti</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% else %}
+    <p>Šiuo metu nesate sukūrę užrašų.</p>
+  {% endif %}
+
+  <a class="nav-item"><a class="button" href="{% url 'note:my-category' %}">Kurti kategoriją</a>
+  
+</div>
+{% endblock %}

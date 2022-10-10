@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form">
+        <h1>{{ category.name }}</h1>
+        </br>
+        <h5>Šiai kategorijai {{ category.name }} priskirti užrašai:</h5>
+        {% for i in mycategory.inscription.all %}
+            <li>{{ i.title }}</li> 
+        {% endfor %}
+    </div>
+{% endblock %}
