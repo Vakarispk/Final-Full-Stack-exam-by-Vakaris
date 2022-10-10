@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form">
+        <h1>{{ inscription.title }}</h1>
+        <hr/>
+            <p>{{ inscription.text | safe }}</p>
+        </hr>
+        </br>
+        <h5>Šiam užrašui {{ inscription.title }} priskirtos kategorijos:</h5>
+        {% for i in inscription.category.all %}
+        <li>{{ i.name }}</li> 
+        {% endfor %}
+    </div>
+{% endblock %}
+

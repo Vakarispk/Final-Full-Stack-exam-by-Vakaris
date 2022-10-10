@@ -49,24 +49,41 @@ form {
     border: 1rem solid #f1f1f1;
     padding: 2rem 12rem;
     border-radius: 2rem;
-  }
+}
 
-  .form {
+.form {
     border: 1rem solid #f1f1f1;
     padding: 2rem 12rem;
     border-radius: 2rem;
-  }
+}
   
-  .line {
+.line {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
+}
 
-  .space {
+.space {
     padding: 0.5rem;
-  }
+}
+
+.nft {
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 2px solid red;
+    margin-bottom: 1rem;
+}   
+
   
+.control-group {
+    border: 1rem solid #f1f1f1;
+    padding: 2rem 12rem;
+    border-radius: 2rem;
+}
+
+.textinput, textarea, select {
+    border-radius: 0.5rem;
+}

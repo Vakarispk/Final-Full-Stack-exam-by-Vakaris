@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="">
+            <legend class="">Naujo užrašo kūrimas</legend>
+            {{ form|crispy }}
+            <button class="button" type="submit">Išsaugoti</button>
+        </fieldset>
+    </form>
+    </div>
+{% endblock content %}

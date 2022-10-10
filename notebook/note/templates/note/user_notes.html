@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form">
+  <h1>Mano sukurti užrašai</h1>
+
+  {% if inscription_list %}
+  <ul>
+
+    {% for notes in inscription_list %} 
+    <li class="nft">
+      <a class="space">{{notes.title}}</a>
+      {% if notes.reader == user %}
+      <div class="space">
+          <a lass="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'note:my-note-update' notes.id %}">Redaguoti</a>
+          <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'note:my-note-delete' notes.id %}">Ištrinti</a>
+      </div>
+      {% endif %}
+      <a class="button" href="{% url 'note:mynote' notes.pk %}" role="button">Peržiūrėti</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% else %}
+    <p>Šiuo metu nesate sukūrę užrašų.</p>
+  {% endif %}
+
+  <a class="nav-item"><a class="button" href="{% url 'note:my-new' %}">Kurti užrašą</a>
+  
+</div>
+{% endblock %}

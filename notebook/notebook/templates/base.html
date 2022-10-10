@@ -14,7 +14,7 @@
             {% if user.is_authenticated %}
                 <h>Labas - {{ user.get_username }}</h>
             <nav>
-                <a href="#">Mano užrašai</a>
+                <a href="{% url 'note:mynotes' %}">Mano užrašai</a>
                 <a href="#">Mano Kategorijos</a>
                 <a href="{% url 'logout' %}">Atsijungti</a>
             </nav>
